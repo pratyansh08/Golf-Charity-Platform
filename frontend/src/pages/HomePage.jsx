@@ -9,7 +9,7 @@ function HomePage() {
     <div className="home-shell">
       <LandingNavbar />
 
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 pb-24 pt-14 sm:px-6 sm:pt-20">
+      <main className="w-full overflow-hidden">
         <LandingHero />
         <LandingFeatures />
         <LandingHowItWorks />

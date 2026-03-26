@@ -3,65 +3,60 @@ import { Link } from "react-router-dom";
 
 function LandingHero() {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 px-6 py-14 shadow-[0_25px_80px_rgba(15,23,42,0.5)] backdrop-blur-xl sm:px-12 sm:py-20">
-      <div className="absolute -left-24 -top-20 h-64 w-64 rounded-full bg-cyan-400/20 blur-3xl" />
-      <div className="absolute -right-20 -top-14 h-56 w-56 rounded-full bg-indigo-400/25 blur-3xl" />
-      <div className="absolute bottom-0 left-1/3 h-48 w-48 rounded-full bg-fuchsia-400/15 blur-3xl" />
-
-      <div className="relative mx-auto max-w-4xl text-center">
-        <motion.p
-          animate={{ opacity: [0.65, 1, 0.65] }}
-          className="mx-auto mb-6 inline-flex rounded-full border border-cyan-300/40 bg-cyan-300/10 px-4 py-1.5 text-xs font-semibold tracking-[0.2em] text-cyan-100"
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          MODERN GOLF CHARITY SUBSCRIPTION PLATFORM
-        </motion.p>
-
-        <motion.h1
-          className="text-4xl font-black leading-tight text-white sm:text-6xl"
-          initial={{ opacity: 0, y: 18 }}
-          transition={{ duration: 0.6 }}
+    <section className="relative min-h-[calc(100vh-73px)] overflow-hidden">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-10 lg:pb-20 lg:pt-20">
+        <motion.div
+          className="relative z-10 max-w-2xl space-y-7"
+          initial={{ opacity: 0, y: 26 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          Build impact with every
-          <span className="gradient-text block drop-shadow-[0_0_35px_rgba(56,189,248,0.45)]">
-            draw, score, and subscription.
-          </span>
-        </motion.h1>
+          <p className="inline-flex items-center rounded-full border border-fuchsia-300/40 bg-fuchsia-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-fuchsia-200">
+            Golf Charity Platform
+          </p>
 
-        <motion.p
-          className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-slate-200 sm:text-xl"
-          initial={{ opacity: 0, y: 18 }}
-          transition={{ delay: 0.08, duration: 0.6 }}
-          whileInView={{ opacity: 1, y: 0 }}
-        >
-          Premium member experience for monthly golf draws, transparent winner verification, and
-          charity-first participation.
-        </motion.p>
+          <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl xl:text-7xl">
+            Premium draws.
+            <span className="gradient-text block drop-shadow-[0_0_30px_rgba(168,85,247,0.45)]">
+              Real community impact.
+            </span>
+          </h1>
+
+          <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            A bold, modern membership experience for golf score submissions, monthly prize draws,
+            and transparent charity contribution.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <motion.div transition={{ type: "spring", stiffness: 260, damping: 20 }} whileHover={{ scale: 1.03 }}>
+              <Link
+                className="inline-flex rounded-xl bg-gradient-to-r from-fuchsia-300 via-violet-300 to-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_12px_32px_rgba(99,102,241,0.4)]"
+                to="/signup"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+
+            <motion.a
+              className="inline-flex rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/80 hover:text-cyan-200"
+              href="#how-it-works"
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              whileHover={{ scale: 1.03 }}
+            >
+              Learn More
+            </motion.a>
+          </div>
+        </motion.div>
 
         <motion.div
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 16 }}
-          transition={{ delay: 0.14, duration: 0.55 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ y: [0, -10, 0] }}
+          className="relative z-10 mx-auto h-[360px] w-full max-w-[520px] lg:h-[470px]"
+          transition={{ duration: 7, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
         >
-          <motion.div transition={{ type: "spring", stiffness: 260, damping: 20 }} whileHover={{ scale: 1.03 }}>
-            <Link
-              className="inline-flex rounded-xl bg-gradient-to-r from-cyan-300 via-sky-300 to-indigo-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_12px_35px_rgba(56,189,248,0.35)]"
-              to="/signup"
-            >
-              Get Started
-            </Link>
-          </motion.div>
-
-          <motion.a
-            className="inline-flex rounded-xl border border-white/25 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/80 hover:bg-white/5 hover:text-cyan-200"
-            href="#features"
-            transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            whileHover={{ scale: 1.03 }}
-          >
-            View Demo
-          </motion.a>
+          <div className="absolute inset-0 rounded-[45%_55%_40%_60%/55%_45%_55%_45%] bg-gradient-to-br from-fuchsia-500/60 via-violet-500/45 to-cyan-500/45 blur-[2px]" />
+          <div className="absolute inset-[12%] rounded-[60%_40%_55%_45%/45%_55%_45%_55%] border border-white/20 bg-slate-900/30 backdrop-blur-2xl" />
+          <div className="absolute -left-10 top-6 h-28 w-28 rounded-full bg-cyan-400/35 blur-3xl" />
+          <div className="absolute -bottom-8 right-0 h-32 w-32 rounded-full bg-fuchsia-400/35 blur-3xl" />
         </motion.div>
       </div>
     </section>
