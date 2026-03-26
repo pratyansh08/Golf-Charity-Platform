@@ -43,11 +43,11 @@ function LandingFeatures() {
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {features.map((feature, index) => (
           <motion.article
             key={feature.title}
-            className="glass-card rounded-2xl p-7"
+            className="glass-card rounded-2xl p-7 lg:min-h-[260px]"
             initial={{ opacity: 0, y: 18 }}
             transition={{ type: "spring", stiffness: 250, damping: 20 }}
             viewport={{ once: true }}

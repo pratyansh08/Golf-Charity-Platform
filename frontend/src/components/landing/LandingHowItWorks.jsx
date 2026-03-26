@@ -17,7 +17,7 @@ function LandingHowItWorks() {
           Three simple actions, one clean experience.
         </p>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
           {steps.map((step, index) => (
             <motion.div
               key={step}
