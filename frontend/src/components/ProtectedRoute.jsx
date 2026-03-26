@@ -6,7 +6,11 @@ function ProtectedRoute({ children }) {
   const location = useLocation();
 
   if (isInitializing) {
-    return <div className="page-status">Loading session...</div>;
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-200">
+        Loading session...
+      </div>
+    );
   }
 
   if (!isAuthenticated) {
