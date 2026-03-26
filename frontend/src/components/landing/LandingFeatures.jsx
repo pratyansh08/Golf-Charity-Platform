@@ -34,10 +34,10 @@ const features = [
 
 function LandingFeatures() {
   return (
-    <FadeInSection className="mx-auto w-full max-w-7xl space-y-10 px-5 py-24 sm:px-8 lg:px-10" id="features">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Core Features</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-slate-300 sm:text-lg">
+    <FadeInSection className="mx-auto w-full max-w-7xl space-y-9 px-5 py-20 sm:px-8 lg:px-10" id="features">
+      <div className="text-left sm:text-center">
+        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">Core Features</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-slate-300 sm:text-base">
           Essential modules presented with clarity, speed, and premium interaction quality.
         </p>
       </div>
@@ -53,8 +53,8 @@ function LandingFeatures() {
             <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-300/25 via-violet-300/20 to-cyan-300/30 text-cyan-100">
               {feature.icon}
             </div>
-            <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">{feature.description}</p>
+            <h3 className="text-lg font-semibold text-white sm:text-xl">{feature.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-300">{feature.description}</p>
           </motion.article>
         ))}
       </div>

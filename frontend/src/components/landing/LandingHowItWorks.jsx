@@ -9,10 +9,10 @@ const steps = [
 
 function LandingHowItWorks() {
   return (
-    <FadeInSection className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8 lg:px-10" id="how-it-works">
+    <FadeInSection className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8 lg:px-10" id="how-it-works">
       <div className="glass-card rounded-3xl p-7 sm:p-10">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">How It Works</h2>
-        <p className="mt-3 max-w-2xl text-slate-300 sm:text-lg">
+        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">How It Works</h2>
+        <p className="mt-3 max-w-2xl text-slate-300 sm:text-base">
           A simple three-step flow focused on clarity and trust.
         </p>
 
