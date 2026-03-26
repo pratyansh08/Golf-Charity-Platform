@@ -34,27 +34,34 @@ const features = [
 
 function LandingFeatures() {
   return (
-    <FadeInSection className="mx-auto w-full max-w-7xl space-y-9 px-5 py-20 sm:px-8 lg:px-10" id="features">
+    <FadeInSection className="mx-auto w-full max-w-7xl space-y-9 px-5 py-24 sm:px-8 lg:px-10" id="features">
       <div className="text-left sm:text-center">
-        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">Core Features</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-slate-300 sm:text-base">
-          Essential modules presented with clarity, speed, and premium interaction quality.
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-200/90">Highlights</p>
+        <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-5xl">What Makes It Powerful</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-slate-300 sm:text-lg">
+          Everything you need for a premium subscription + draw product experience.
         </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
-        {features.map((feature) => (
+        {features.map((feature, index) => (
           <motion.article
             key={feature.title}
             className="glass-card rounded-2xl p-7"
+            initial={{ opacity: 0, y: 18 }}
             transition={{ type: "spring", stiffness: 250, damping: 20 }}
+            viewport={{ once: true }}
             whileHover={{ y: -8, scale: 1.015 }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
-            <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-300/25 via-violet-300/20 to-cyan-300/30 text-cyan-100">
+            <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-red-400/25 via-rose-400/20 to-violet-400/20 text-red-100">
               {feature.icon}
             </div>
             <h3 className="text-lg font-semibold text-white sm:text-xl">{feature.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-300">{feature.description}</p>
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-red-200/80">
+              0{index + 1}
+            </p>
           </motion.article>
         ))}
       </div>

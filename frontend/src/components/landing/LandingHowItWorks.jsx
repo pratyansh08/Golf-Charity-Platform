@@ -11,9 +11,10 @@ function LandingHowItWorks() {
   return (
     <FadeInSection className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8 lg:px-10" id="how-it-works">
       <div className="glass-card rounded-3xl p-7 sm:p-10">
-        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">How It Works</h2>
-        <p className="mt-3 max-w-2xl text-slate-300 sm:text-base">
-          A simple three-step flow focused on clarity and trust.
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-200/90">Process</p>
+        <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-5xl">How It Works</h2>
+        <p className="mt-3 max-w-2xl text-slate-300 sm:text-lg">
+          Three simple actions, one clean experience.
         </p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -26,7 +27,7 @@ function LandingHowItWorks() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <p className="text-xs font-semibold tracking-[0.18em] text-fuchsia-200">STEP {index + 1}</p>
+              <p className="text-xs font-semibold tracking-[0.18em] text-red-200">STEP {index + 1}</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-200 sm:text-base">{step}</p>
             </motion.div>
           ))}
