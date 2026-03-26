@@ -10,17 +10,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.home-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(20, 184, 166, 0.28), transparent 36%),
+    radial-gradient(circle at 90% 4%, rgba(59, 130, 246, 0.24), transparent 32%),
+    radial-gradient(circle at 50% 120%, rgba(251, 191, 36, 0.14), transparent 45%),
+    linear-gradient(140deg, #020617 0%, #0b1120 45%, #111827 100%);
+}
+
 .glass-card {
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 16px 45px rgba(2, 6, 23, 0.35);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #67e8f9 0%, #22d3ee 35%, #60a5fa 100%);
+  background: linear-gradient(94deg, #67e8f9 0%, #2dd4bf 35%, #60a5fa 75%, #a78bfa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.section-heading {
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.4), transparent);
 }
